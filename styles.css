@@ -342,13 +342,3 @@ button { font: inherit; color: inherit; }
 
 .controls { position: relative; z-index: 15; }
 
-/* dog-ear: the top-right corner of every turnable page is slightly folded */
-.page.is-recto::before, .--portrait .page:not(.is-last)::before {
-  content: ""; position: absolute; top: 0; right: 0; z-index: 4; pointer-events: none;
-  width: 8cqw; height: 8cqw;
-  background: linear-gradient(225deg, #172034 0 50%, #e8e2d4 50% 100%);
-  border-bottom-left-radius: .9cqw;
-  box-shadow: -.5cqw .6cqw 1.1cqw rgba(0,0,0,.22);
-}
-.page.page--ink.is-recto::before, .--portrait .page--ink:not(.is-last)::before { background: linear-gradient(225deg, #172034 0 50%, #2b3a5c 50% 100%); }
-.page.is-last::before { display: none; }
