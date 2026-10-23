@@ -87,7 +87,7 @@
     flippingTime: reduced ? 350 : 950, mobileScrollSupport: false,
     disableFlipByClick: true, showPageCorners: true, swipeDistance: 25
   });
-  pf.loadFromHTML(pages);
+  pf.loadFromHTML(pages); const softCovers = () => [0, total - 1].forEach(i => pf.getPage(i)?.setDensity('soft')); softCovers();
   window.__pf = pf;
 
   const cur = $('[data-cur]');
@@ -111,7 +111,7 @@
   };
 
   pf.on('flip', () => { label(); dismissHint(); });
-  pf.on('changeOrientation', label);
+  pf.on('changeOrientation', () => { softCovers(); label(); });
   pf.on('changeState', e => { if (!peeking && (e.data === 'user_fold' || e.data === 'flipping')) dismissHint(); });
   label();
 
