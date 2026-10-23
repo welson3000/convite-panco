@@ -87,7 +87,7 @@
     flippingTime: reduced ? 350 : 950, mobileScrollSupport: false,
     disableFlipByClick: true, showPageCorners: true, swipeDistance: 25
   });
-  pages.forEach((p, i) => p.classList.add(i % 2 ? 'is-verso' : 'is-recto', ...(i === total - 1 ? ['is-last'] : []))); pf.loadFromHTML(pages);
+  pf.loadFromHTML(pages);
   window.__pf = pf;
 
   const cur = $('[data-cur]');
