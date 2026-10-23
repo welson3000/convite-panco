@@ -115,18 +115,22 @@
   pf.on('changeState', e => { if (!peeking && (e.data === 'user_fold' || e.data === 'flipping')) dismissHint(); });
   label();
 
-  prev.addEventListener('click', () => pf.flipPrev('top'));
-  next.addEventListener('click', () => pf.flipNext('top'));
+  // Programmatic turns: lift the 'corners only' guard for the duration of the call.
+  const guarded = fn => { const st = pf.getSettings(); st.disableFlipByClick = false; try { fn(); } finally { st.disableFlipByClick = true; } };
+  const goPrev = () => guarded(() => pf.flipPrev('top'));
+  const goNext = () => guarded(() => pf.flipNext('top'));
+  prev.addEventListener('click', goPrev);
+  next.addEventListener('click', goNext);
   $$('[data-goto]').forEach(b => b.addEventListener('click', e => {
     e.stopPropagation();
     const target = Number(b.dataset.goto) - 1;
     if (target === pf.getCurrentPageIndex()) return;
-    pf.flip(target, 'top');
+    guarded(() => pf.flip(target, 'top'));
   }));
   addEventListener('keydown', e => {
     if (dialog.open) return;
-    if (e.key === 'ArrowRight' || e.key === 'PageDown') { e.preventDefault(); pf.flipNext('top'); }
-    if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); pf.flipPrev('top'); }
+    if (e.key === 'ArrowRight' || e.key === 'PageDown') { e.preventDefault(); goNext(); }
+    if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); goPrev(); }
     if (e.key === 'Home') pf.turnToPage(0);
   });
 
