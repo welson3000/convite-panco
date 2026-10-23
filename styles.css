@@ -339,3 +339,5 @@ button { font: inherit; color: inherit; }
 .pull { font-size: 5.7cqw; }
 .toc button { padding: 3.2cqw 0; }
 .aside { padding-top: 3cqw; }
+
+.controls { position: relative; z-index: 15; }
