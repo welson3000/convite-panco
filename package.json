@@ -1,0 +1,9 @@
+{
+  "name": "convite-panco",
+  "private": true,
+  "type": "module",
+  "description": "Livreto digital: convite à Panco para paraninfar as turmas de dezembro de 2026 da Escola Profissionalizante Fabiano de Cristo",
+  "dependencies": {
+    "@neondatabase/serverless": "^0.10.4"
+  }
+}
