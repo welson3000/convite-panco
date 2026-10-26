@@ -342,3 +342,12 @@ button { font: inherit; color: inherit; }
 
 .controls { position: relative; z-index: 15; }
 
+/* last page: link to the single-page invitation */
+a.pill { display: inline-block; text-decoration: none; }
+.pill--end { align-self: center; margin-top: auto; }
+.toc a { width: 100%; display: grid; grid-template-columns: 9cqw 1fr auto; align-items: baseline; gap: 2cqw; padding: 3.2cqw 0; color: var(--ink); text-decoration: none; font-size: 3.85cqw; }
+.toc a:hover span { text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: .2em; }
+.toc a b { font-family: var(--text); font-style: italic; font-weight: 400; color: var(--ink-soft); }
+.page a * { pointer-events: none; }
+.pg--center .litany { margin: 2cqw 0 3.5cqw !important; }
+.pg--center .h-sm { margin-bottom: 3.5cqw; }
