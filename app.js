@@ -101,10 +101,9 @@
     const i = pf.getCurrentPageIndex();
     const land = pf.getOrientation() === 'landscape';
     prev.disabled = i === 0;
-    next.disabled = i >= total - 1;
+    next.disabled = i >= total - (land ? 2 : 1);
     if (i === 0) { cur.textContent = 'Capa'; of.textContent = ''; return; }
-    if (i === total - 1) { cur.textContent = 'Contracapa'; of.textContent = ''; return; }
-    if (land && i + 1 < total - 1) cur.textContent = `Páginas ${i + 1} e ${i + 2}`;
+    if (land && i + 1 < total) cur.textContent = `Páginas ${i + 1} e ${i + 2}`;
     else cur.textContent = `Página ${i + 1}`;
     of.textContent = `de ${total}`;
     $$('.pg--invite').forEach(p => p.classList.toggle('is-open', Math.abs(i - 15) <= 1));
