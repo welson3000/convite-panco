@@ -1,6 +1,6 @@
 # Um convite para a Panco
 
-Livreto digital da Escola Profissionalizante Fabiano de Cristo convidando a Panco para ser paraninfa das turmas com conclusão prevista para dezembro de 2026.
+Livreto digital da Escola Profissionalizante Paulo de Tarso convidando a Panco para ser paraninfa das turmas com conclusão prevista para dezembro de 2026.
 
 - Site estático (`index.html`, `styles.css`, `app.js`, `img/`, `fonts/`), hospedado na Vercel.
 - `api/resposta.js`: grava as respostas do formulário no Neon (tabela `respostas`).
