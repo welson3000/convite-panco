@@ -43,16 +43,9 @@ img { display: block; max-width: 100%; }
   max-width: 54rem; margin: 0 auto; background: var(--paper); border-radius: 3px; overflow: hidden;
   box-shadow: 0 40px 80px -30px rgba(0,0,0,.65), 0 2px 6px rgba(0,0,0,.25);
 }
-.hero { position: relative; display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); grid-template-rows: 1fr 1fr; gap: 3px; aspect-ratio: 16 / 9; background: var(--paper); }
-.hero figure { margin: 0; position: relative; overflow: hidden; background: var(--ink); }
-.hero img { width: 100%; height: 100%; object-fit: cover; }
-.hero__a { grid-row: 1 / 3; }
-.hero__a img { object-position: 45% 55%; }
-.hero__b img { object-position: 50% 70%; }
-.hero__c img { object-position: 22% 45%; }
-.hero::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(180deg, rgba(24,35,58,.55) 0%, rgba(24,35,58,0) 24%, rgba(24,35,58,0) 72%, rgba(24,35,58,.6) 100%); }
-.hero__cap { position: absolute; z-index: 1; left: clamp(1.25rem, 5vw, 3.5rem); bottom: clamp(.7rem, 2vw, 1.2rem); margin: 0; color: #fff; font-style: italic; font-size: clamp(.82rem, .78rem + .25vw, .98rem); }
-@media (max-width: 560px) { .hero { aspect-ratio: 4 / 5; grid-template-columns: 1fr 1fr; grid-template-rows: 1.6fr 1fr; } .hero__a { grid-row: 1; grid-column: 1 / -1; } }
+.hero { position: relative; aspect-ratio: 16 / 9; background: var(--ink); }
+.hero img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; }
+.hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(24,35,58,.55) 0%, rgba(24,35,58,0) 26%); }
 .hero__top { position: absolute; z-index: 1; top: clamp(.9rem, 3vw, 1.8rem); left: clamp(1.25rem, 5vw, 3.5rem); right: clamp(1.25rem, 5vw, 3.5rem); margin: 0; color: #fff; display: flex; flex-wrap: wrap; justify-content: space-between; gap: .2rem 1rem; font-family: var(--display); font-size: clamp(.82rem, .78rem + .3vw, 1rem); line-height: 1.3; }
 .hero__top em { color: var(--gold-light); }
 .title { padding: clamp(1.8rem, 5vw, 3.2rem) clamp(1.25rem, 6vw, 4.5rem) 0; }
@@ -150,11 +143,8 @@ strong { font-weight: 600; }
 
 <main class="sheet">
   <header class="hero">
-    <figure class="hero__a"><img src="img/paes-l.webp" alt="Pães sovados da Panco fatiados sobre a mesa da escola, ao lado da embalagem de bolinhas coloridas."></figure>
-    <figure class="hero__b"><img src="img/mesa-s.webp" alt="Pacotes de Pão Sovado Panco sobre a bancada do refeitório, com alunos ao fundo."></figure>
-    <figure class="hero__c"><img src="img/vitrine-s.webp" alt="Pacote de Pão Sovado Panco ao lado das bandejas de pão fatiado, pronto para ser servido."></figure>
+    <img src="img/padaria-l.webp" alt="Alunas de panificação sorriem ao lado de uma bandeja de pães que acabaram de modelar.">
     <p class="hero__top"><span>Escola Profissionalizante Fabiano de Cristo</span><em>Dezembro de 2026</em></p>
-    <p class="hero__cap">Os pães doados pela Panco, à mesa da escola.</p>
   </header>
   <div class="title">
     <h1><span>Do pão que chega</span> <span class="i">ao diploma que</span> <span class="g">se conquista.</span></h1>
@@ -191,8 +181,8 @@ strong { font-weight: 600; }
   </div>
 
   <div class="strip">
-    <figure><img src="img/padaria-s.webp" alt="Alunas da panificação ao lado de uma bandeja de pães que acabaram de modelar."><figcaption>As alunas da panificação</figcaption></figure>
-    <figure><img src="img/masseira-s.webp" alt="Aluna opera a masseira no laboratório de panificação."><figcaption>Na masseira</figcaption></figure>
+    <figure><img src="img/mesa-s.webp" alt="Pacotes de pão Panco sobre a bancada do refeitório."><figcaption>Os pães da Panco à mesa</figcaption></figure>
+    <figure><img src="img/masseira-s.webp" alt="Aluna opera a masseira no laboratório de panificação."><figcaption>Panificação</figcaption></figure>
     <figure><img src="img/solar-s.webp" alt="Alunos posicionam placas de energia solar sobre um telhado."><figcaption>Energia solar</figcaption></figure>
   </div>
 </main>
