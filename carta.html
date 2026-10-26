@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Um convite para a Panco</title>
+<meta name="description" content="A Escola Profissionalizante Fabiano de Cristo convida a Panco para ser paraninfa das turmas de dezembro de 2026.">
+<meta name="theme-color" content="#151d2e">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Um convite para a Panco">
+<meta property="og:description" content="Do pão que chega ao diploma que se conquista. Uma carta da Escola Profissionalizante Fabiano de Cristo.">
+<meta property="og:image" content="https://convite-panco.vercel.app/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="fonts/bodoni-moda-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/newsreader-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face { font-family: "Bodoni Moda"; font-weight: 400; font-style: normal; font-display: swap; src: url("fonts/bodoni-moda-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Bodoni Moda"; font-weight: 400; font-style: italic; font-display: swap; src: url("fonts/bodoni-moda-latin-400-italic.woff2") format("woff2"); }
+@font-face { font-family: "Bodoni Moda"; font-weight: 500; font-style: normal; font-display: swap; src: url("fonts/bodoni-moda-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "Newsreader"; font-weight: 300; font-style: normal; font-display: swap; src: url("fonts/newsreader-latin-300-normal.woff2") format("woff2"); }
+@font-face { font-family: "Newsreader"; font-weight: 400; font-style: normal; font-display: swap; src: url("fonts/newsreader-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Newsreader"; font-weight: 400; font-style: italic; font-display: swap; src: url("fonts/newsreader-latin-400-italic.woff2") format("woff2"); }
+@font-face { font-family: "Newsreader"; font-weight: 600; font-style: normal; font-display: swap; src: url("fonts/newsreader-latin-600-normal.woff2") format("woff2"); }
+
+/* One letter on one sheet, resting on the same dark desk as the magazine. */
+:root {
+  --desk: #151d2e; --desk-2: #1f2a42; --paper: #fdfcf9; --ink: #18233a; --ink-soft: #4a5570;
+  --gold: #b8862b; --gold-light: #d9b36a; --line: rgba(24,35,58,.15); --red: #d6403a;
+  --display: "Bodoni Moda", "Didot", Georgia, serif; --text: "Newsreader", Georgia, serif;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; background: var(--desk); }
+body {
+  margin: 0; color: var(--ink); font-family: var(--text); font-size: clamp(1.08rem, 1rem + .3vw, 1.22rem); line-height: 1.62;
+  background: radial-gradient(120% 80% at 50% 0%, var(--desk-2) 0%, var(--desk) 60%, #0f1522 100%) fixed;
+  padding: clamp(.75rem, 4vw, 3.5rem) max(.75rem, env(safe-area-inset-right)) clamp(2rem, 6vw, 4rem) max(.75rem, env(safe-area-inset-left));
+  -webkit-font-smoothing: antialiased;
+}
+img { display: block; max-width: 100%; }
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 3px; }
+
+.sheet {
+  max-width: 54rem; margin: 0 auto; background: var(--paper); border-radius: 3px; overflow: hidden;
+  box-shadow: 0 40px 80px -30px rgba(0,0,0,.65), 0 2px 6px rgba(0,0,0,.25);
+}
+.hero { position: relative; aspect-ratio: 16 / 9; background: var(--ink); }
+.hero img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; }
+.hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(24,35,58,.55) 0%, rgba(24,35,58,0) 26%); }
+.hero__top { position: absolute; z-index: 1; top: clamp(.9rem, 3vw, 1.8rem); left: clamp(1.25rem, 5vw, 3.5rem); right: clamp(1.25rem, 5vw, 3.5rem); margin: 0; color: #fff; display: flex; flex-wrap: wrap; justify-content: space-between; gap: .2rem 1rem; font-family: var(--display); font-size: clamp(.82rem, .78rem + .3vw, 1rem); line-height: 1.3; }
+.hero__top em { color: var(--gold-light); }
+.title { padding: clamp(1.8rem, 5vw, 3.2rem) clamp(1.25rem, 6vw, 4.5rem) 0; }
+.title h1 { max-width: 36rem; margin: 0 auto; font-family: var(--display); font-weight: 400; letter-spacing: -.02em; line-height: .98; font-size: clamp(2.3rem, 1.2rem + 4.6vw, 4.2rem); color: var(--ink); }
+.title h1 span { display: block; }
+.title h1 .i { font-style: italic; padding-left: clamp(1rem, 4vw, 2.6rem); }
+.title h1 .g { color: var(--gold); }
+
+.body { padding: clamp(1.6rem, 4vw, 2.6rem) clamp(1.25rem, 6vw, 4.5rem) clamp(2.5rem, 6vw, 4rem); }
+.letter { max-width: 36rem; margin: 0 auto; }
+.letter p { margin: 0 0 1.05em; text-wrap: pretty; }
+.from { font-style: italic; color: var(--ink-soft); margin-bottom: 1.6rem !important; }
+.hello { font-family: var(--display); font-size: clamp(1.5rem, 1.2rem + 1vw, 1.9rem); line-height: 1.2; margin-bottom: 1rem !important; }
+.dropcap::first-letter { font-family: var(--display); float: left; font-size: 3.6em; line-height: .8; padding: .07em .08em 0 0; color: var(--gold); }
+.years { font-family: var(--display); }
+strong { font-weight: 600; }
+
+.invite {
+  position: relative; margin: clamp(2.5rem, 6vw, 3.5rem) auto; max-width: 30rem; text-align: center;
+  padding: 3.4rem clamp(1.25rem, 5vw, 2.6rem) 2.4rem; background: #fff;
+  box-shadow: 0 24px 50px -28px rgba(24,35,58,.55);
+}
+.invite::before, .invite::after { content: ""; position: absolute; pointer-events: none; }
+.invite::before { inset: 10px; border: 1px solid var(--gold); }
+.invite::after { inset: 15px; border: 1px solid rgba(184,134,43,.32); }
+.seal {
+  position: absolute; top: 0; left: 50%; transform: translate(-50%, -50%); z-index: 2;
+  width: 4.6rem; height: 4.6rem; border-radius: 50%; display: grid; place-items: center;
+  background: radial-gradient(circle at 35% 30%, #e2c07a, var(--gold) 55%, #8d6418);
+  box-shadow: 0 6px 16px rgba(0,0,0,.3), inset 0 0 0 4px rgba(255,255,255,.12);
+}
+.seal span { font-family: var(--display); font-style: italic; font-size: 2.2rem; color: #fff8e6; line-height: 1; }
+.invite__pre { font-style: italic; color: var(--ink-soft); margin: 0 0 .8rem; line-height: 1.4; }
+.invite__name { font-family: var(--display); font-weight: 500; font-size: clamp(3.6rem, 2.4rem + 5vw, 5.6rem); line-height: .9; margin: 0 0 1rem; letter-spacing: -.02em; }
+.invite__role { margin: 0 0 .4rem; line-height: 1.45; }
+.invite__date { font-family: var(--display); font-style: italic; color: var(--gold); font-size: clamp(1.6rem, 1.3rem + 1.2vw, 2.1rem); margin: 0; }
+
+.cta { text-align: center; margin: 2.6rem auto 0; max-width: 32rem; }
+.cta p { margin: 0 0 1.2rem; }
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; border: 0; cursor: pointer; border-radius: 99px;
+  background: var(--ink); color: #fff; font: 500 1.08rem/1 var(--text); padding: 1.05rem 2rem; text-decoration: none;
+  transition: background .2s, transform .15s;
+}
+.btn:hover { background: #24345a; }
+.btn:active { transform: scale(.98); }
+.cta small { display: block; margin-top: .8rem; font-style: italic; color: var(--ink-soft); font-size: .95rem; }
+.alt { display: inline-block; margin-top: 1.4rem; color: var(--ink); font-style: italic; text-underline-offset: 3px; text-decoration-color: var(--gold); }
+
+.sign { margin-top: 3rem !important; font-style: italic; margin-bottom: .3rem !important; }
+.signature { font-family: var(--display); font-size: clamp(1.4rem, 1.2rem + .8vw, 1.75rem); line-height: 1.2; margin: 0 !important; }
+.signature span { display: block; font-family: var(--text); font-style: italic; font-size: .95rem; color: var(--ink-soft); margin-top: .35rem; }
+
+.strip { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 3px; background: var(--paper); }
+.strip figure { margin: 0; position: relative; }
+.strip img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.strip figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 1.6rem .8rem .6rem; color: #fff; font-style: italic; font-size: .85rem; line-height: 1.3; background: linear-gradient(180deg, rgba(10,14,24,0), rgba(10,14,24,.8)); }
+@media (max-width: 560px) { .strip { grid-template-columns: 1fr 1fr; } .strip figure:first-child { grid-column: 1 / -1; } .strip figure:first-child img { aspect-ratio: 16 / 9; } }
+
+/* reply dialog */
+.reply-dialog { width: min(36rem, calc(100vw - 1.5rem)); max-height: calc(100dvh - 1.5rem); border: 0; border-radius: 10px; padding: 0; background: var(--paper); color: var(--ink); box-shadow: 0 40px 80px -20px rgba(0,0,0,.6); overflow: auto; }
+.reply-dialog::backdrop { background: rgba(10,14,24,.65); backdrop-filter: blur(3px); }
+.close-form { position: sticky; top: 0; display: flex; justify-content: flex-end; margin: 0; height: 0; z-index: 2; }
+.close { width: 2.6rem; height: 2.6rem; margin: .5rem; border-radius: 50%; border: 0; background: rgba(24,35,58,.06); font-size: 1.6rem; line-height: 1; cursor: pointer; color: var(--ink); }
+.reply-wrap { padding: clamp(1.4rem, 5vw, 2.4rem); font-size: 1.05rem; line-height: 1.5; }
+.reply-wrap h2 { font-family: var(--display); font-weight: 400; font-size: clamp(1.8rem, 1.4rem + 1.5vw, 2.4rem); margin: 0 0 1.2rem; padding-right: 2.5rem; line-height: 1.1; }
+.reply { display: grid; gap: 1.2rem; }
+.choice { border: 0; padding: 0; margin: 0; display: grid; gap: .6rem; min-width: 0; }
+.choice legend { font-style: italic; color: var(--ink-soft); margin-bottom: .6rem; padding: 0; }
+.choice label { display: flex; gap: .8rem; align-items: flex-start; cursor: pointer; border: 1px solid var(--line); border-radius: 6px; padding: .85rem 1rem; line-height: 1.4; background: #fff; }
+.choice label:has(input:checked) { border-color: var(--gold); background: #fdf6e8; }
+.choice input { accent-color: var(--ink); width: 1.1rem; height: 1.1rem; margin: .18rem 0 0; flex: none; }
+.row { display: grid; gap: 1.2rem; }
+@media (min-width: 560px) { .row { grid-template-columns: 1fr 1fr; } }
+.field { display: grid; gap: .3rem; }
+.field > span { font-size: .92rem; color: var(--ink-soft); }
+.field input, .field textarea { font: 400 1.05rem/1.4 var(--text); color: var(--ink); width: 100%; border: 0; border-bottom: 1px solid rgba(24,35,58,.3); border-radius: 0; background: transparent; padding: .45rem 0; resize: vertical; }
+.field input::placeholder { color: #858b98; font-style: italic; }
+.field input:focus, .field textarea:focus { outline: none; border-bottom: 2px solid var(--gold); padding-bottom: calc(.45rem - 1px); }
+.field.is-invalid input { border-bottom-color: var(--red); }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.reply__foot { display: flex; flex-wrap: wrap; align-items: center; gap: .8rem 1.2rem; }
+.reply__status { margin: 0; font-style: italic; font-size: .98rem; color: var(--ink-soft); }
+.reply__status.is-error { color: #b3261e; }
+.thanks { text-align: center; padding: 3rem 1rem 1.5rem; }
+.thanks:focus { outline: none; }
+.thanks .seal { position: relative; left: auto; top: auto; transform: none; margin: 0 auto 1rem; }
+.thanks h3 { font-family: var(--display); font-weight: 400; font-size: 2rem; margin: 0 0 .5rem; }
+.thanks p { margin: 0; }
+@media (prefers-reduced-motion: no-preference) { .reply-dialog[open] { animation: rise .45s cubic-bezier(.2,.7,.1,1); } }
+@keyframes rise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+</style>
+</head>
+<body>
+
+<main class="sheet">
+  <header class="hero">
+    <img src="img/padaria-l.webp" alt="Alunas de panificação sorriem ao lado de uma bandeja de pães que acabaram de modelar.">
+    <p class="hero__top"><span>Escola Profissionalizante Fabiano de Cristo</span><em>Dezembro de 2026</em></p>
+  </header>
+  <div class="title">
+    <h1><span>Do pão que chega</span> <span class="i">ao diploma que</span> <span class="g">se conquista.</span></h1>
+  </div>
+
+  <div class="body">
+    <article class="letter">
+      <p class="from">Uma carta da Escola Profissionalizante Fabiano de Cristo, em parceria com o SENAI-SP</p>
+      <p class="hello">Querida equipe Panco,</p>
+      <p class="dropcap">Há <span class="years">66</span> anos, a <strong>Casa Transitória Fabiano de Cristo</strong> acolhe e transforma vidas de pessoas em situação de vulnerabilidade. É nesse espaço que funciona a <strong>Escola Profissionalizante Fabiano de Cristo</strong>, que, em parceria com o <strong>SENAI-SP</strong>, oferece qualificação profissional a quem busca o primeiro emprego, uma recolocação ou simplesmente uma nova oportunidade para recomeçar.</p>
+      <p>Ao longo dessa caminhada, a Panco tornou-se uma parceira indispensável. Por meio da doação de pães, vocês oferecem muito mais do que alimento: levam acolhimento, dignidade e a certeza de que existem empresas que acreditam no potencial de cada aluno.</p>
+      <p>Ao final de cada jornada, o certificado representa meses de dedicação, esforço e superação. É por reconhecer a importância da Panco nessa trajetória que gostaríamos de fazer um convite muito especial.</p>
+
+      <section class="invite" aria-labelledby="convite">
+        <div class="seal" aria-hidden="true"><span>P</span></div>
+        <p class="invite__pre">A Escola Profissionalizante Fabiano de Cristo tem a honra de convidar a</p>
+        <h2 class="invite__name" id="convite">Panco</h2>
+        <p class="invite__role">para ser a paraninfa das turmas com conclusão prevista para</p>
+        <p class="invite__date">dezembro de 2026</p>
+      </section>
+
+      <p>Ser paraninfa é muito mais do que participar de uma cerimônia. É ser reconhecida como parte da história daqueles que venceram desafios e conquistaram um novo futuro.</p>
+      <p>Gostaríamos, ainda, de convidá-los para uma breve reunião, na data e horário que forem mais convenientes, para apresentar os resultados dessa parceria e conversar sobre esse convite.</p>
+
+      <div class="cta">
+        <button type="button" class="btn" data-open-reply>Responder ao convite</button>
+        <small>Leva menos de um minuto.</small>
+        <a class="alt" href="/">Folhear a revista completa</a>
+      </div>
+
+      <p class="sign">Com gratidão,</p>
+      <p class="signature">Casa Transitória Fabiano de Cristo<span>Escola Profissionalizante Fabiano de Cristo, em parceria com o SENAI-SP</span></p>
+    </article>
+  </div>
+
+  <div class="strip">
+    <figure><img src="img/mesa-s.webp" alt="Pacotes de pão Panco sobre a bancada do refeitório."><figcaption>Os pães da Panco à mesa</figcaption></figure>
+    <figure><img src="img/masseira-s.webp" alt="Aluna opera a masseira no laboratório de panificação."><figcaption>Panificação</figcaption></figure>
+    <figure><img src="img/solar-s.webp" alt="Alunos posicionam placas de energia solar sobre um telhado."><figcaption>Energia solar</figcaption></figure>
+  </div>
+</main>
+
+<dialog class="reply-dialog" id="reply-dialog" aria-labelledby="reply-title">
+  <form method="dialog" class="close-form"><button class="close" aria-label="Fechar">×</button></form>
+  <div class="reply-wrap">
+    <h2 id="reply-title">Responder ao convite</h2>
+    <form class="reply" id="reply" novalidate>
+      <fieldset class="choice">
+        <legend>Como a Panco gostaria de responder?</legend>
+        <label><input type="radio" name="intencao" value="aceita" checked><span><strong>Aceitamos o convite</strong> e queremos marcar a reunião.</span></label>
+        <label><input type="radio" name="intencao" value="conversar"><span><strong>Queremos conversar</strong> antes de decidir.</span></label>
+      </fieldset>
+      <div class="row">
+        <label class="field"><span>Seu nome</span><input id="f-nome" name="nome" autocomplete="name" required maxlength="120"></label>
+        <label class="field"><span>Cargo ou área</span><input id="f-cargo" name="cargo" autocomplete="organization-title" maxlength="120"></label>
+      </div>
+      <label class="field"><span>E-mail ou telefone para contato</span><input id="f-contato" name="contato" autocomplete="email" required maxlength="160"></label>
+      <label class="field"><span>Datas e horários que funcionam para vocês</span><input id="f-datas" name="datas" maxlength="300" placeholder="Ex.: terças ou quintas, à tarde"></label>
+      <label class="field"><span>Mensagem (opcional)</span><textarea id="f-msg" name="mensagem" rows="3" maxlength="2000"></textarea></label>
+      <label class="hp" aria-hidden="true">Não preencha<input name="site" tabindex="-1" autocomplete="off"></label>
+      <div class="reply__foot">
+        <button class="btn" type="submit">Enviar resposta</button>
+        <p class="reply__status" role="status" aria-live="polite"></p>
+      </div>
+    </form>
+    <div class="thanks" hidden tabindex="-1">
+      <div class="seal" aria-hidden="true"><span>P</span></div>
+      <h3>Resposta enviada.</h3>
+      <p>Obrigado, <span data-nome></span>. Vamos entrar em contato para confirmar a reunião.</p>
+    </div>
+  </div>
+</dialog>
+
+<script>
+(() => {
+  const dialog = document.getElementById('reply-dialog');
+  const form = document.getElementById('reply');
+  const status = form.querySelector('.reply__status');
+  const thanks = dialog.querySelector('.thanks');
+  const submit = form.querySelector('button[type=submit]');
+  document.querySelectorAll('[data-open-reply]').forEach(b => b.addEventListener('click', () => { dialog.showModal(); setTimeout(() => document.getElementById('f-nome').focus(), 50); }));
+  dialog.addEventListener('click', e => { if (e.target === dialog) dialog.close(); });
+  if (location.hash === '#responder') dialog.showModal();
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    status.textContent = ''; status.classList.remove('is-error');
+    const data = Object.fromEntries(new FormData(form));
+    const missing = ['nome', 'contato'].filter(k => {
+      const bad = !String(data[k] || '').trim();
+      form.elements[k].closest('.field').classList.toggle('is-invalid', bad);
+      return bad;
+    });
+    if (missing.length) {
+      status.classList.add('is-error');
+      status.textContent = missing.length === 2 ? 'Preencha seu nome e um e-mail ou telefone para contato.'
+        : missing[0] === 'nome' ? 'Preencha seu nome.' : 'Informe um e-mail ou telefone para contato.';
+      form.elements[missing[0]].focus();
+      return;
+    }
+    submit.disabled = true; submit.textContent = 'Enviando…';
+    try {
+      const r = await fetch('/api/resposta', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
+      if (!r.ok) throw new Error('falha');
+      thanks.querySelector('[data-nome]').textContent = data.nome.trim().split(/\s+/)[0];
+      form.hidden = true; thanks.hidden = false; thanks.focus();
+    } catch {
+      status.classList.add('is-error');
+      status.textContent = 'Não foi possível enviar agora. Verifique sua conexão e tente de novo.';
+    } finally {
+      submit.disabled = false; submit.textContent = 'Enviar resposta';
+    }
+  });
+})();
+</script>
+</body>
+</html>
